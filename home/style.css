@@ -1,0 +1,67 @@
+body{
+    max-width:800px;
+    margin:50px auto;
+    padding:20px;
+    background:#fff;
+    color:#000;
+    font-family:"맑은 고딕",sans-serif;
+    line-height:1.8;
+    font-size:16px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.profile{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    margin-right:10px;
+}
+
+.logo h1{
+    margin:0;
+    font-size:40px;
+    font-weight:normal;
+}
+
+.logo h1 span{
+    font-size:16px;
+    font-weight:normal;
+    margin-left:3px;
+    vertical-align:middle;
+}
+
+h2{
+    margin-top:40px;
+    margin-bottom:15px;
+    font-size:20px;
+    font-weight:normal;
+    border-bottom:1px solid #000;
+    padding-bottom:5px;
+}
+
+h3{
+    font-size:14px;
+    font-weight:normal;
+}
+
+.title{
+    margin-top:65px;   /* 숫자를 늘리면 전체가 더 아래로 내려감 */
+}
+
+p{
+    margin:0;
+}
+
+label{
+    display:block;
+    margin:8px 0;
+}
+
+input{
+    margin-right:8px;
+}
