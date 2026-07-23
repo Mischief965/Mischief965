@@ -4,7 +4,10 @@ body{
     padding:20px;
     background:#fff;
     color:#000;
-    font-family:"맑은 고딕",sans-serif;
+    font-family:
+        "Pretendard",
+        "맑은 고딕",
+        sans-serif;
     line-height:1.8;
     font-size:16px;
 }
@@ -20,6 +23,12 @@ body{
     height:120px;
     object-fit:cover;
     margin-right:10px;
+    border-radius:50%;
+}
+
+.profile-text{
+    margin-top:25px;
+    margin-bottom:20px;
 }
 
 .logo h1{
@@ -33,6 +42,7 @@ body{
     font-weight:normal;
     margin-left:3px;
     vertical-align:middle;
+    color:#666;
 }
 
 h2{
@@ -51,6 +61,54 @@ h3{
 
 .title{
     margin-top:65px;   /* 숫자를 늘리면 전체가 더 아래로 내려감 */
+}
+
+.list{
+    font-size:14px;
+    line-height:1.9;
+    margin-top:15px;
+    margin-left:18px;   /* 15~24px 정도가 적당 */
+}
+
+details{
+    margin-top:40px;
+}
+
+summary{
+    list-style:none;
+    font-size:20px;
+    font-weight:normal;
+    border-bottom:1px solid #000;
+    padding-bottom:5px;
+    cursor:pointer;
+    user-select:none;
+    display:block;
+    padding:5px 0;
+}
+
+/* 기본 삼각형 제거 */
+summary::-webkit-details-marker{
+    display:none;
+}
+
+/* 직접 삼각형 만들기 */
+summary::before{
+    content:"▶";
+    font-size:12px;
+    margin-right:8px;
+}
+
+details[open] summary::before{
+    content:"▼";
+}
+
+a{
+    color:#000;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
 }
 
 p{
