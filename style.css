@@ -1,5 +1,6 @@
 body{
-    max-width:800px;
+    max-width:850px;
+    width:95%;
     margin:50px auto;
     padding:20px;
     background:#fff;
@@ -78,11 +79,9 @@ h3{
 }
 
 .preview-gallery img{
-    width:150px;
-    height:150px;
+    width:100%;
+    aspect-ratio:1;
     object-fit:cover;
-    border-radius:2px;
-    transition:.2s;
 }
 
 .preview-gallery img:hover{
@@ -318,4 +317,90 @@ input{
     font-size:15px;
 
     line-height:1.8;
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width:768px){
+
+body{
+    margin:20px auto;
+    padding:18px;
+    font-size:18px;
+}
+
+.logo{
+    gap:16px;
+}
+
+.profile{
+    width:90px;
+    height:90px;
+}
+
+.logo h1{
+    font-size:32px;
+}
+
+.logo h1 span{
+    display:block;
+    margin-top:4px;
+    margin-left:0;
+    font-size:15px;
+}
+
+.title{
+    margin-top:30px;
+}
+
+.profile-text{
+    font-size:17px;
+}
+
+summary{
+    font-size:22px;
+}
+
+.list{
+    font-size:17px;
+    line-height:2;
+}
+
+.preview-gallery{
+    gap:8px;
+}
+
+.preview-gallery img{
+    width:18vw;
+    height:18vw;
+    min-width:62px;
+    min-height:62px;
+}
+
+.gallery{
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+}
+
+.gallery img{
+    border-radius:6px;
+}
+
+.prev,
+.next{
+    font-size:42px;
+}
+
+.close{
+    font-size:38px;
+    right:20px;
+}
+
+.lightbox img{
+    max-width:95%;
+    max-height:75%;
+}
+
 }
