@@ -30,8 +30,17 @@ CP : LokiSylvie
 
 <h2>Links</h2>
 
-<a href="https://x.com/Mischief965" target="_blank" rel="noopener noreferrer">X</a><br>
+<a href="https://x.com/Mischief965" target="_blank" rel="noopener noreferrer">X (Twitter)</a><br>
 <!--<a href="https://~~~" target="_blank" rel="noopener noreferrer">Tumblr</a>-->
+
+<h2 class="gallery-title">
+    <a href="gallery.html">
+        Gallery
+        <span>+</span>
+    </a>
+</h2>
+
+<div class="preview-gallery" id="preview-gallery"></div>
 
 <details>
     <summary>Movie</summary>
@@ -204,6 +213,24 @@ CP : LokiSylvie
 </div>
 
 </details>
+
+<div id="lightbox" class="lightbox">
+
+    <span class="close" onclick="closeLightbox()">&times;</span>
+
+    <button class="prev" onclick="changeImage(-1)">❮</button>
+
+    <img id="lightbox-img">
+
+    <button class="next" onclick="changeImage(1)">❯</button>
+
+    <div class="caption">
+        <span id="caption"></span>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>

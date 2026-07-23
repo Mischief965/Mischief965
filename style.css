@@ -70,6 +70,107 @@ h3{
     margin-left:18px;   /* 15~24px 정도가 적당 */
 }
 
+.preview-gallery{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:10px;
+
+}
+
+.preview-gallery img{
+    width:150px;
+    height:150px;
+    object-fit:cover;
+    border-radius:2px;
+    transition:.2s;
+}
+
+.preview-gallery img:hover{
+    transform:scale(1.03);
+}
+
+.gallery-link{
+    margin-bottom:40px;
+}
+
+.gallery-link a{
+    text-decoration:none;
+    color:#000;
+}
+
+.gallery-link a:hover{
+    text-decoration:underline;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    gap:8px;
+    margin-top:25px;
+}
+
+.gallery img{
+    width:100%;
+    aspect-ratio:1;
+    object-fit:cover;
+    border-radius:2px;
+    transition:.2s;
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+}
+
+.gallery-title a{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    color:#000;
+    text-decoration:none;
+}
+
+.gallery-title a:hover{
+    text-decoration:none;
+}
+
+.gallery-title span{
+    font-size:30px;
+    color:#777;
+    transition:.2s;
+}
+
+.gallery-title a:hover span{
+    color:#000;
+    transform:rotate(90deg);
+}
+
+.page-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+
+    border-bottom:1px solid #000;
+    padding-bottom:5px;
+    margin-bottom:20px;
+}
+
+.page-title h1{
+    margin:0;
+    font-size:32px;
+    font-weight:normal;
+}
+
+.back-btn{
+    text-decoration:none;
+    color:#000;
+    font-size:18px;
+}
+
+.back-btn:hover{
+    text-decoration:underline;
+}
+
 details{
     margin-top:40px;
 }
@@ -122,4 +223,99 @@ label{
 
 input{
     margin-right:8px;
+}
+
+/* ===== Lightbox ===== */
+
+.lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.92);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.25s;
+    z-index:9999;
+}
+
+.lightbox.show{
+    opacity:1;
+    visibility:visible;
+}
+
+.lightbox img{
+
+    max-width:88%;
+    max-height:82%;
+
+    border-radius:2px;
+
+    transition:.2s;
+}
+
+.close{
+
+    position:absolute;
+    top:25px;
+    right:40px;
+
+    color:white;
+
+    font-size:42px;
+
+    cursor:pointer;
+}
+
+.prev,
+.next{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    border:none;
+
+    background:none;
+
+    color:white;
+
+    font-size:55px;
+
+    cursor:pointer;
+
+    padding:20px;
+}
+
+.prev{
+
+    left:30px;
+}
+
+.next{
+
+    right:30px;
+}
+
+.caption{
+
+    position:absolute;
+
+    bottom:30px;
+
+    width:100%;
+
+    text-align:center;
+
+    color:white;
+
+    font-size:15px;
+
+    line-height:1.8;
 }

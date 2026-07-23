@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Gallery</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="page-title">
+
+    <h1>Gallery</h1>
+
+    <a href="index.html" class="back-btn">← Home</a>
+
+</div>
+
+<div class="gallery" id="gallery"></div>
+
+<div id="lightbox" class="lightbox">
+
+    <span class="close" onclick="closeLightbox()">&times;</span>
+
+    <button class="prev" onclick="changeImage(-1)">❮</button>
+
+    <img id="lightbox-img">
+
+    <button class="next" onclick="changeImage(1)">❯</button>
+
+    <div class="caption">
+        <span id="caption"></span>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
