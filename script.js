@@ -144,3 +144,35 @@ if (gallery) {
     });
 
 }
+
+
+const quotes = [
+
+    "I am Loki of Asgard.",
+    "Kneel!!",
+    "Kneel before me. I said, KNEEL!!!",
+    "I have been falling...! for 30 minutes!",
+    "Your savior is here!!!",
+    "I, Loki, Prince of Asgard. ...Odinson. rightful king of Jotunheim, the God of Mischief, do hereby pledge to you my undying fidelity.",
+    "I assure you, Brother. The sun will shine on us again.",
+    "Glorious purpose⋯.",
+    "Love is a dagger.",
+    "For you, for all of us.",
+    "I know what I want. I know what kind of god I need to be.",
+    "We are playing god.",
+    "Good. 'Cause that's not who I am anymore. I'm Sylvie now.",
+    "I need your unique Loki perspective.",
+    "For all time. Always.",
+
+];
+
+const randomQuote = quotes[
+    Math.floor(Math.random() * quotes.length)
+];
+
+const quote = document.getElementById("quote");
+
+if (quote) {
+    quote.textContent =
+        quotes[Math.floor(Math.random() * quotes.length)];
+}

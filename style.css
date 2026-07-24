@@ -1,6 +1,5 @@
 body{
-    max-width:850px;
-    width:95%;
+    max-width:800px;
     margin:50px auto;
     padding:20px;
     background:#fff;
@@ -62,6 +61,26 @@ h3{
 
 .title{
     margin-top:65px;   /* 숫자를 늘리면 전체가 더 아래로 내려감 */
+}
+
+.title-line{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+}
+
+.title-line h1{
+    margin:0;
+    font-size:40px;
+    white-space:nowrap;   /* Ink는 절대 줄바꿈 안 함 */
+}
+
+#quote{
+    margin-top:30px;
+    color:#666;
+    font-size:16px;
+    line-height:1.5;
+    flex:1;               /* 남은 공간 모두 사용 */
 }
 
 .list{
@@ -340,15 +359,13 @@ body{
     height:90px;
 }
 
-.logo h1{
+.title-line h1{
     font-size:32px;
 }
 
-.logo h1 span{
-    display:block;
-    margin-top:4px;
-    margin-left:0;
+#quote{
     font-size:15px;
+    margin-top:8px;
 }
 
 .title{
@@ -404,3 +421,4 @@ summary{
 }
 
 }
+
