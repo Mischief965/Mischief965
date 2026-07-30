@@ -41,7 +41,7 @@ caption:"설명2"
 },
 
 {
-src:"images/gallery/001.jpg",
+src:"images/gallery/001.GIF",
 caption:"설명1"
 }
 
