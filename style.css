@@ -215,7 +215,6 @@ summary::before{
     content:"▶";
     font-size:12px;
     margin-right:8px;
-    margin-bottom:8px;
 }
 
 details[open] summary::before{
