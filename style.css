@@ -1,0 +1,450 @@
+body{
+    max-width:800px;
+    margin:50px auto;
+    padding:20px;
+    background:#fff;
+    color:#000;
+    font-family:
+        "Pretendard",
+        "맑은 고딕",
+        sans-serif;
+    line-height:1.8;
+    font-size:16px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.profile{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    margin-right:10px;
+    border-radius:50%;
+}
+
+.profile-text{
+    margin-top:25px;
+    margin-bottom:20px;
+}
+
+.logo h1{
+    margin:0;
+    font-size:40px;
+    font-weight:normal;
+}
+
+.logo h1 span{
+    font-size:16px;
+    font-weight:normal;
+    margin-left:3px;
+    vertical-align:middle;
+    color:#666;
+}
+
+h2{
+    margin-top:40px;
+    margin-bottom:15px;
+    font-size:20px;
+    font-weight:normal;
+    border-bottom:1px solid #000;
+    padding-bottom:5px;
+}
+
+h3{
+    font-size:14px;
+    font-weight:normal;
+}
+
+.title{
+    margin-top:65px;   /* 숫자를 늘리면 전체가 더 아래로 내려감 */
+}
+
+.title-line{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+}
+
+.title-line h1{
+    margin:0;
+    font-size:40px;
+    white-space:nowrap;   /* Ink는 절대 줄바꿈 안 함 */
+}
+
+#quote{
+    margin-top:30px;
+    color:#666;
+    font-size:16px;
+    line-height:1.5;
+    flex:1;               /* 남은 공간 모두 사용 */
+}
+
+.list{
+    font-size:14px;
+    line-height:1.9;
+    margin-top:15px;
+    margin-left:18px;   /* 15~24px 정도가 적당 */
+}
+
+.preview-gallery{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:10px;
+
+}
+
+.preview-gallery img{
+    width:100%;
+    aspect-ratio:1;
+    object-fit:cover;
+}
+
+.preview-gallery img:hover{
+    transform:scale(1.03);
+}
+
+.gallery-link{
+    margin-bottom:40px;
+}
+
+.gallery-link a{
+    text-decoration:none;
+    color:#000;
+}
+
+.gallery-link a:hover{
+    text-decoration:underline;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    gap:8px;
+    margin-top:25px;
+}
+
+.gallery img{
+    width:100%;
+    aspect-ratio:1;
+    object-fit:cover;
+    border-radius:2px;
+    transition:.2s;
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+}
+
+.gallery-title a{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    color:#000;
+    text-decoration:none;
+}
+
+.gallery-title a:hover{
+    text-decoration:none;
+}
+
+.gallery-title span{
+    font-size:30px;
+    color:#777;
+    transition:.2s;
+}
+
+.gallery-title a:hover span{
+    color:#000;
+    transform:rotate(90deg);
+}
+
+.page-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+
+    border-bottom:1px solid #000;
+    padding-bottom:5px;
+    margin-bottom:20px;
+}
+
+.page-title h1{
+    margin:0;
+    font-size:32px;
+    font-weight:normal;
+}
+
+.back-btn{
+    text-decoration:none;
+    color:#000;
+    font-size:18px;
+}
+
+.back-btn:hover{
+    text-decoration:underline;
+}
+
+details{
+    margin-top:40px;
+}
+
+summary{
+    list-style:none;
+    font-size:20px;
+    font-weight:normal;
+    border-bottom:1px solid #000;
+    padding-bottom:5px;
+    cursor:pointer;
+    user-select:none;
+    display:block;
+    padding:5px 0;
+}
+
+/* 기본 삼각형 제거 */
+summary::-webkit-details-marker{
+    display:none;
+}
+
+/* 직접 삼각형 만들기 */
+summary::before{
+    content:"▶";
+    font-size:12px;
+    margin-right:8px;
+}
+
+details[open] summary::before{
+    content:"▼";
+}
+
+a{
+    color:#000;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+p{
+    margin:0;
+}
+
+label{
+    display:block;
+    margin:8px 0;
+}
+
+input{
+    margin-right:8px;
+}
+
+/* ===== Lightbox ===== */
+
+.lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.92);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.25s;
+    z-index:9999;
+}
+
+.lightbox.show{
+    opacity:1;
+    visibility:visible;
+}
+
+.lightbox img{
+
+    max-width:88%;
+    max-height:82%;
+
+    border-radius:2px;
+
+    transition:.2s;
+}
+
+.close{
+
+    position:absolute;
+    top:25px;
+    right:40px;
+
+    color:white;
+
+    font-size:42px;
+
+    cursor:pointer;
+}
+
+.prev,
+.next{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    border:none;
+
+    background:none;
+
+    color:white;
+
+    font-size:55px;
+
+    cursor:pointer;
+
+    padding:20px;
+}
+
+.prev{
+
+    left:30px;
+}
+
+.next{
+
+    right:30px;
+}
+
+.caption{
+
+    position:absolute;
+
+    bottom:30px;
+
+    width:100%;
+
+    text-align:center;
+
+    color:white;
+
+    font-size:15px;
+
+    line-height:1.8;
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width:768px){
+
+body{
+    margin:20px auto;
+    padding:18px;
+    font-size:14px;
+}
+
+h2{
+    font-size:18px;
+}
+
+.logo{
+    gap:16px;
+}
+
+.profile{
+    width:90px;
+    height:90px;
+}
+
+.title-line h1{
+    font-size:24px;
+}
+
+#quote{
+    font-size:14px;
+    margin-top:8px;
+}
+
+.title{
+    margin-top:30px;
+}
+
+.profile-text{
+    font-size:14px;
+}
+
+summary{
+    font-size:18px;
+}
+
+.list{
+    font-size:14px;
+    line-height:2;
+}
+
+.gallery-title a{
+    margin-bottom:-10px;
+}
+
+.preview-gallery{
+    gap:2px;
+}
+
+.preview-gallery img{
+    width:18vw;
+    height:18vw;
+    min-width:62px;
+    min-height:62px;
+}
+
+.page-title h1{
+    font-size:24px;
+}
+
+.gallery{
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+}
+
+.gallery img{
+    border-radius:6px;
+}
+
+.prev,
+.next{
+    font-size:24px;
+}
+
+.close{
+    font-size:24px;
+    right:20px;
+}
+
+.lightbox img{
+    max-width:95%;
+    max-height:75%;
+}
+
+}
+
+/* 텍스트 드래그 방지 */
+body{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* 이미지 드래그 방지 */
+img{
+    -webkit-user-drag: none;
+    user-drag: none;
+    pointer-events: auto;
+}
