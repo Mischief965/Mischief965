@@ -1,5 +1,19 @@
 const images = [
 
+{
+src:"images/gallery/009.jpg",
+caption:"설명9"
+},
+
+{
+src:"images/gallery/008.jpg",
+caption:"설명8"
+},
+
+{
+src:"images/gallery/007.jpg",
+caption:"설명7"
+},
 
 {
 src:"images/gallery/006.jpg",
