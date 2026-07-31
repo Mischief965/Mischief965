@@ -176,3 +176,28 @@ if (quote) {
     quote.textContent =
         quotes[Math.floor(Math.random() * quotes.length)];
 }
+
+// 우클릭 방지
+document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+});
+
+// 드래그 방지
+document.addEventListener("dragstart", function(e){
+    e.preventDefault();
+});
+
+// 복사 방지
+document.addEventListener("copy", function(e){
+    e.preventDefault();
+});
+
+// 잘라내기 방지
+document.addEventListener("cut", function(e){
+    e.preventDefault();
+});
+
+// 붙여넣기 방지(선택)
+document.addEventListener("paste", function(e){
+    e.preventDefault();
+});

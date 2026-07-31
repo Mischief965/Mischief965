@@ -422,3 +422,17 @@ summary{
 
 }
 
+/* 텍스트 드래그 방지 */
+body{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* 이미지 드래그 방지 */
+img{
+    -webkit-user-drag: none;
+    user-drag: none;
+    pointer-events: auto;
+}
